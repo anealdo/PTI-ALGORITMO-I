@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTI ALGORITMOS E PROGRAMAÇÃO I</title>
+</head>
+<body>
+    <script>
+        
+        var gasolina, etanol, dif_preco, resp='s'
+        
+        
+        for (i=0; resp == 's'; i++) {    
+        etanol=parseFloat(prompt("Informe o preço do etanol."));
+        gasolina=parseFloat(prompt("Informe o preço da gasolina."));
+        dif_preco=(etanol/gasolina*100);
+        
+        if(etanol >= 0 && gasolina >= 0 && typeof etanol === 'number' && typeof gasolina === 'number'){            
+            if (dif_preco < 70){
+                alert("É mais vantajoso abastecer com etanol.");
+            } else if (dif_preco > 70){
+                alert("É mais vantajoso abastecer com gasolina.")
+            } else {
+                alert("Tanto faz abastecer com gasolina ou etanol.")
+            }
+            resp=prompt("Deseja continuar? s para sim, n para não.");
+            }else{   
+                alert("Você informou um valor inválido. Digite novamente");
+                }    
+        } alert("Programa finalizado!")
+        </script>
+</body>
+</html>
